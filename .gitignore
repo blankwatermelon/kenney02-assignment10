@@ -1,0 +1,17 @@
+# Ignore cache directory
+cache/
+
+# Ignore images directory under static
+static/images/
+
+# Ignore common temporary files and system files
+*.pyc
+*.pyo
+*.log
+*.tmp
+.DS_Store
+__pycache__/
+
+# Exclude environment files
+.env
+venv/

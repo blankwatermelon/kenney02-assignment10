@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootleg Google Search</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <h1>Google</h1>
+
+    <!-- Search Form -->
+    <form id="query-form" enctype="multipart/form-data">
+        <label for="text_query">Text Query:</label>
+        <input type="text" id="text_query" name="text_query">
+        <br>
+
+        <label for="image_query">Image Query:</label>
+        <input type="file" id="image_query" name="image_query">
+        <br>
+
+        <label for="lambda">Lambda (Weight for Text Query):</label>
+        <input type="number" id="lambda" name="lambda" step="0.1" min="0" max="1" value="0.5">
+        <br><br>
+
+        <label for="query_type">Query Type:</label>
+        <select id="query_type" name="query_type">
+            <option value="text">Text Query</option>
+            <option value="image">Image Query</option>
+            <option value="combined">Combined Query</option>
+        </select>
+        <br>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <hr>
+
+    <h2>Results:</h2>
+    <div id="results" class="results"></div>
+</body>
+</html>
